@@ -14,7 +14,7 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return f'{self.question_text} - {self.choice_text} - {self.votes}'
+        return f'{self.question} - {self.choice_text} - {self.votes}'
 
 class CinemaType(models.Model):
     text = models.CharField(max_length=200)
@@ -22,10 +22,9 @@ class CinemaType(models.Model):
     def __str__(self):
         return f'{self.text}'
 
-class Cinema(models.Model):
-    CinemaType = models.ForeignKey(CinemaType, on_delete = models.CASCADE)
-    CinemaName = models.CharFeild(max_length = 200)
-    CinemaPrice = models.IntegerFeild(default = 0)
-
+class inputmovie(models.Model):
+    img = models.CharField(max_length=200)
+    moviename = models.CharField(max_length=200)
+    synopsis = models.CharField(max_length=1000)
     def __str__(self):
-        return f'{self.CinemaType} - {self.CinemaName} - {self.CinemaPrice}'
+        return f'{self.img} - {self.moviename} - {self.synopsis}'
