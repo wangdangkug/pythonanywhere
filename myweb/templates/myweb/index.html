@@ -40,8 +40,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <ul class="clear">
       <li class="active"><a href="/">Home</a></li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Link Text</a></li>
+      <li><a href="/insertmovie">insertmovie</a></li>
       <li><a href="#">CONTACT</a></li>
       {% if user.is_authenticated %}<li class="main-button"><h6><font color="#ff66b3">ขอต้อนรับคุณ : {{ user }}</font></h6></li><li class="main-button"><a href="/logout">LOGOUT</a></li>{% else %}<li class="main-button"><a href="/login">LOGIN</a></li>{% endif %}
     </ul>
@@ -116,7 +115,7 @@ Licence URI: https://www.os-templates.com/template-terms
       <h6 class="heading">Cinema</h6>
     </div>
     <div class="group">
-      <article class="one_third first"><img class="btmspace-30" src="https://www.img.in.th/images/098cc650ef4f104fe22d995b2d59c8ab.png" alt=""></a>
+      <article class="one_third first"><img class="btmspace-20" src="https://www.img.in.th/images/098cc650ef4f104fe22d995b2d59c8ab.png" alt=""></a>
         <h6 class="nospace heading">The Witches</h6>
         <p>The Witches - แม่มด เล่าเรื่องราวในช่วงปี 1967 ของเด็กชายกำพร้าคนหนึ่ง (รับบทโดย จาห์ซีร์ คาดีม บรูโน่) ที่อาศัยอยู่กับคุณยายผู้เป็นที่รัก (รับบทโดย อ็อคเทเวีย สเปนเซอร์) แต่ชีวิตพวกเขากลับเปลี่ยนไปเมื่อเด็กน้อยถูกหลอกล่อไปยังคฤหาสน์แสนสวยแห่งหนึ่ง แล้วได้พบกับแม่มดสาวสวยสุดไฮโซ (รับบทโดย แอนน์ แฮทธาเวย์)&hellip;</p>
         <footer class="nospace"><a class="btn" href="https://www.majorcineplex.com/booking2/search_showtime/movie=1363">Buy Now</a></footer>
@@ -131,6 +130,13 @@ Licence URI: https://www.os-templates.com/template-terms
         <p>เมื่อเหล่าไททั่นได้บุกรื้อกำแพงที่คอยปกป้องมนุษยชาติจากการคุกคามของพวกมัน ในขณะที่เราตั้งตารอ "ซีซั่นสุดท้าย" เมื่อเรื่องราวของเอเรนดำเนินมาถึงจุดไคลแม็กซ์ ภาพยนตร์นี้จะรวบรวมเรื่องราวเพื่อให้ได้เตรียมตัวหรือแก้ไข เพื่อการดำเนินเรื่องที่จะมาถึง &hellip;</p>
         <footer class="nospace"><a class="btn" href="https://www.majorcineplex.com/booking2/search_showtime/movie=1357">Buy Now</a></footer>
       </article>
+      {% for a in inputmoviess %}
+      <article class="one_third"><img class="btmspace-30" src="{{a.img}}" alt=""></a>
+        <h6 class="nospace heading">{{a.moviename}}</h6>
+        <p>{{a.synopsis}} &hellip;</p>
+        <footer class="nospace"><a class="btn" href="https://www.majorcineplex.com/booking2/search_showtime/movie=1357">Buy Now</a></footer>
+      </article>
+      {% endfor %}
     </div>
 
     <!-- ################################################################################################ -->

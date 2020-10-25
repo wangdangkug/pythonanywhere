@@ -22,9 +22,11 @@ class CinemaType(models.Model):
     def __str__(self):
         return f'{self.text}'
 
-class inputmovie(models.Model):
+
+class inputmovies(models.Model):
     img = models.CharField(max_length=200)
     moviename = models.CharField(max_length=200)
     synopsis = models.CharField(max_length=1000)
     def __str__(self):
         return f'{self.img} - {self.moviename} - {self.synopsis}'
+

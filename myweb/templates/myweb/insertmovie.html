@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {
+  background-image: url('https://image.freepik.com/free-photo/flat-lay-cinema-elements-yellow-background-with-copy-space_23-2148457819.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<title>WANGDANG THEARTER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container w3-blue">
+  <h1>เพิ่มหนัง</h1>
+</div><br>
+            <form method="POST">
+                {% csrf_token %}
+                Img url : <input type="text" name="img"><br><br>
+               ชื่อหนัง : <input type="text" name="moviename"><br><br>
+                เรื่องย่อ : <input type="text" name="synopsis"><br><br>
+                <input type="submit">
+            </form>
+</div>
+</body>
+<html>
